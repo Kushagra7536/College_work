@@ -60,6 +60,7 @@ void Multiply()
         printf("\n");
     }
     printf("\n");
+
     // Printing B
     for (int i = 0; i < rows2; i++)
     {
@@ -70,6 +71,7 @@ void Multiply()
         printf("\n");
     }
     printf("\n");
+    
     // Printing C
     for (int i = 0; i < rows1; i++)
     {
