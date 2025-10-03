@@ -31,64 +31,64 @@
 
 
 //! CREATING A LINKED_LIST USING CUSTOM CONSTRUCTOR
-#include<stdio.h>
-#include<stdlib.h>
-typedef struct node{ // declaration of node
-    int val;
-    struct node *next;
-}Node;
+// #include<stdio.h>
+// #include<stdlib.h>
+// typedef struct node{ // declaration of node
+//     int val;
+//     struct node *next;
+// }Node;
 
-typedef struct{ 
-    Node *head;
-    Node *tail;
-}Link_list;
+// typedef struct{ 
+//     Node *head;
+//     Node *tail;
+// }Link_list;
 
-//definition of the constructor
-Link_list* List_constructor(){
+// //definition of the constructor
+// Link_list* List_constructor(){
 
-    Link_list *chain=malloc(sizeof(Link_list));
-    chain->head = NULL;
-    chain->tail = NULL;
-    printf("Enter a series of numbers : ");
-    char line[1000];
-    fgets(line, sizeof(line), stdin); // Read entire line
+//     Link_list *chain=malloc(sizeof(Link_list));
+//     chain->head = NULL;
+//     chain->tail = NULL;
+//     printf("Enter a series of numbers : ");
+//     char line[1000];
+//     fgets(line, sizeof(line), stdin); // Read entire line
     
-    char *ptr = line;
-    int n,offset;
+//     char *ptr = line;
+//     int n,offset;
     
-    // Parse numbers from the line
-    while(sscanf(ptr, "%d %n", &n , &offset) == 1){
+//     // Parse numbers from the line
+//     while(sscanf(ptr, "%d %n", &n , &offset) == 1){
 
-        //creating node first
-        Node *new_node=malloc(sizeof(Node));
-        new_node->val = n;
-        new_node-> next = NULL;
+//         //creating node first
+//         Node *new_node=malloc(sizeof(Node));
+//         new_node->val = n;
+//         new_node-> next = NULL;
         
-        // checking and updating head & tail of the list
-        if (chain->head == NULL){ // if list was empty
-            chain->head=new_node;
-            chain->tail=new_node;
-        }
-        else{
-            chain->tail->next=new_node; // if list has some nodes , we need to update the next member of it
-            chain->tail = new_node;
-        }
+//         // checking and updating head & tail of the list
+//         if (chain->head == NULL){ // if list was empty
+//             chain->head=new_node;
+//             chain->tail=new_node;
+//         }
+//         else{
+//             chain->tail->next=new_node; // if list has some nodes , we need to update the next member of it
+//             chain->tail = new_node;
+//         }
 
-        ptr+=offset;
-    } 
-    return chain;
-}
+//         ptr+=offset;
+//     } 
+//     return chain;
+// }
 
-int main(){
+// int main(){
    
-    Link_list *l = List_constructor(); 
+//     Link_list *l = List_constructor(); 
 
-    Node *curr = l->head;
-    while (curr!=NULL){
-        printf("%d ",curr->val);
-        curr=curr->next;
-    }
-}
+//     Node *curr = l->head;
+//     while (curr!=NULL){
+//         printf("%d ",curr->val);
+//         curr=curr->next;
+//     }
+// }
 
 
 
