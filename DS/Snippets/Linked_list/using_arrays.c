@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include<stdbool.h>
 #define max 100
 
 //! DECLARATION 
@@ -81,16 +82,21 @@ void delete(int pos){
 
 //? searching for a node
 int search (int x){
+    bool flag = false;
     int current=head;
     int count=0;
     while(current != -1){
 
-        if (list[current].val == x) return count;
-
+        if (list[current].val == x){
+            flag = true;
+            return count;
+        }
         else {
             current=list[current].next;
             count++;
         }
+        
+
         
     }
 }

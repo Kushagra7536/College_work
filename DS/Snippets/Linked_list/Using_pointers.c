@@ -33,6 +33,7 @@
 //! CREATING A LINKED_LIST USING CUSTOM CONSTRUCTOR
 #include<stdio.h>
 #include<stdlib.h>
+#include<stdbool.h>
 typedef struct node{ // declaration of node
     int val;
     struct node *next;
@@ -134,14 +135,19 @@ void add_middle(Link_list*l,int pos , int x){
 
 // ! Searching for a node
 void search(Link_list *l , int x){
+    bool flag = false ;
     int count=0;
     Node *curr=l->head;
     while (curr!=NULL){
+        if (curr->val == x){
+            flag = true;
+            break;
+        }
         curr=curr->next;
         count++;
-        if (curr->val == x) break;
     }
-    printf("%d is on Node no. %d\n",curr->val,count);
+    if (flag == true) printf("%d is on Node no. %d\n",curr->val,count);
+    else printf("Element not found \n");
 }
 
 //! Deleting a node
