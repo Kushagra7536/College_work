@@ -154,4 +154,5 @@ void Add()
 }
 int main(){
     Add();
+    Multipy();
 }
