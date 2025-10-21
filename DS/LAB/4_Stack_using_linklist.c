@@ -1,6 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
-#define max 10
+#define max 5
 typedef struct node{
     int val;
     struct node* next;
@@ -19,7 +19,7 @@ void push(int x){
     newnode->next=NULL;
     if (stk.count==max) printf("Overflow\n");
     else{
-        newnode->next=stk.top->next;
+        newnode->next=stk.top;
         stk.top=newnode;
         stk.count++;
     }
@@ -42,14 +42,20 @@ void peek(){
 
 int main(){
     for (int i=0 ; i<5 ; i++){
-        push(i);
+        push(i); 
+        printf("No. of elements are %d\n",stk.count);
     }
 
-    pop();
-    pop();
+    push(6); // overflow
 
     peek();
 
-    for (int i=1 ; i<=stk.count ; i++ )
-        printf("%d ",stk.top->val);
+    for (int i=0 ; i<5 ; i++){
+        pop(); 
+        printf("No. of elements are %d\n",stk.count);
+    }
+    
+    pop();
+     
+    peek();
 }
