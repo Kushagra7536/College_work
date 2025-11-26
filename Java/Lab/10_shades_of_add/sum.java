@@ -3,15 +3,15 @@ import java.util.Scanner;
 class Add {
     int x, y, z, w;
 
-    int add2(int a, int b) {
+    int add(int a, int b) {
         return a + b;
     }
 
-    int add3(int a, int b, int c) {
+    int add(int a, int b, int c) {
         return a + b + c;
     }
 
-    int add4(int a, int b, int c, int d) {
+    int add(int a, int b, int c, int d) {
         return a + b + c + d;
     }
 
@@ -36,10 +36,10 @@ class sum {
         Add obj = new Add(p, q, r, s);
         sc.close();
 
-        System.out.println(obj.add2(obj.x, obj.y));
+        System.out.println(obj.add(obj.x, obj.y));
 
-        System.out.println(obj.add3(obj.x, obj.y, obj.z));
+        System.out.println(obj.add(obj.x, obj.y, obj.z));
 
-        System.out.println(obj.add4(obj.x, obj.y, obj.z, obj.w));
+        System.out.println(obj.add(obj.x, obj.y, obj.z, obj.w));
     }
 }
