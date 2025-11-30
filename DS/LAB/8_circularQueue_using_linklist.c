@@ -1,68 +1,82 @@
-#include<stdio.h>
-#include<stdlib.h>
-# define max 5
+#include <stdio.h>
+#include <stdlib.h>
+#define max 5
 
-typedef struct node{
+typedef struct node
+{
     int val;
-    struct node* next;
-}node;
+    struct node *next;
+} node;
 
-typedef struct cqueue{
-    node* front;
-    node* rear;
+typedef struct cqueue
+{
+    node *front;
+    node *rear;
     int count;
-}cqueue;
+} cqueue;
 
-cqueue cq = {NULL,NULL,0};
+cqueue cq = {NULL, NULL, 0};
 
-void enqueue(int x){
-    node* newnode = malloc(sizeof(node));
-    newnode->val=x;
-    newnode->next=NULL;
-    if (cq.count==max) printf("Overflow\n");
-    else{
-        if (cq.front==NULL){
-            cq.front=newnode;
-            newnode->next=cq.front;
-            cq.rear=newnode;
-            cq.rear->next=cq.front;
+void enqueue(int x)
+{
+    node *newnode = malloc(sizeof(node));
+    newnode->val = x;
+    newnode->next = NULL;
+    if (cq.count == max)
+        printf("Overflow\n");
+    else
+    {
+        if (cq.front == NULL)
+        {
+            cq.front = newnode;
+            newnode->next = cq.front;
+            cq.rear = newnode;
+            cq.rear->next = cq.front;
             cq.count++;
         }
-        else{
-            newnode->next=cq.front;
-            cq.rear->next=newnode;
-            cq.rear=newnode;
+        else
+        {
+            newnode->next = cq.front;
+            cq.rear->next = newnode;
+            cq.rear = newnode;
             cq.count++;
-
         }
     }
 }
 
-void dequeue(){
-    if (cq.front==NULL) printf("Underflow\n");
-    else{
-        if (cq.front==cq.rear){
-            printf("dequeueped %d\n",cq.front->val);
-            cq.front=NULL;
-            cq.rear=NULL;
+void dequeue()
+{
+    if (cq.front == NULL)
+        printf("Underflow\n");
+    else
+    {
+        if (cq.front == cq.rear)
+        {
+            printf("dequeueped %d\n", cq.front->val);
+            cq.front = NULL;
+            cq.rear = NULL;
             cq.count--;
         }
-        else{
-            printf("dequeueped %d\n",cq.front->val);
-            cq.front=cq.front->next;
-            cq.rear->next=cq.front;
+        else
+        {
+            printf("dequeueped %d\n", cq.front->val);
+            cq.front = cq.front->next;
+            cq.rear->next = cq.front;
             cq.count--;
         }
     }
 }
 
-void peek(){
-    if (cq.front==NULL) printf("Queue empty\n");
-    else printf("Current front is %d\n",cq.front->val);
+void peek()
+{
+    if (cq.front == NULL)
+        printf("Queue empty\n");
+    else
+        printf("Current front is %d\n", cq.front->val);
 }
-    
 
-int main(){
+int main()
+{
     enqueue(1);
     enqueue(2);
     enqueue(3);
@@ -86,13 +100,13 @@ int main(){
 
     peek();
 
-//     dequeue();
-//     dequeue();
+    //     dequeue();
+    //     dequeue();
 
-//     peek();
+    //     peek();
 
-//     dequeue();
-//     dequeue();
+    //     dequeue();
+    //     dequeue();
 
-//     peek();
+    //     peek();
 }

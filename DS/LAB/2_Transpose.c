@@ -1,23 +1,28 @@
-#include<stdio.h>
-void Transpose(){
-    int rows , cols ;
+#include <stdio.h>
+void Transpose()
+{
+    int rows, cols;
     printf("Enter rows and cols : ");
-    scanf("%d%d",&rows,&cols);
+    scanf("%d%d", &rows, &cols);
 
-    int A[rows][cols] , B[cols][rows] ;
+    int A[rows][cols], B[cols][rows];
 
     // input of A
-    for (int i = 0; i < rows; i++){
-        for (int j = 0; j < cols; j++){
+    for (int i = 0; i < rows; i++)
+    {
+        for (int j = 0; j < cols; j++)
+        {
             printf("Enter element [%d][%d]: ", i + 1, j + 1);
             scanf("%d", &A[i][j]);
         }
     }
 
-    //Calculating B
-    for (int i = 0; i <cols; i++){
-        for (int j = 0; j < rows ; j++){
-            B[i][j]=A[j][i];
+    // Calculating B
+    for (int i = 0; i < cols; i++)
+    {
+        for (int j = 0; j < rows; j++)
+        {
+            B[i][j] = A[j][i];
         }
     }
 
@@ -44,8 +49,8 @@ void Transpose(){
     }
 
     printf("\n");
-    
 }
-int main(){
+int main()
+{
     Transpose();
 }
