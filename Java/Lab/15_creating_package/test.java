@@ -1,11 +1,10 @@
-// import p1.*;
-
+import p1.*;
 class test {
     public static void main(String args[]) {
-        p1.A obj = new p1.A();
+        A obj = new A();
         obj.m1();
 
-        // A obj2 = new A();
-        // obj2.m1();
+        B obj2 = new B();
+        obj2.m2();
     }
 }
