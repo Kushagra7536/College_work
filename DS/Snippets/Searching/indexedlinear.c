@@ -22,11 +22,11 @@ index *makeindex(int arr[], int n , int step){
 int search(int arr[],int n, index* indexarray, int step, int x){
     int findex=0;
     for(int i=0 ; i<(int)(n/step) ; i++){
-        if (x>=indexarray[i].val) findex=indexarray[i].t;
+        if (x>=indexarray[i].val) findex=indexarray[i].t; // finding the group to search in 
         else break;
     }
-    for (int i=findex; i<findex+step ; i++){
-        if (x==arr[i]) return i;
+    for (int i=findex; i<findex+step ; i++){  // linear search to find the target element 
+        if (x==arr[i]) return i; 
     }
     return -1;
 }
