@@ -4,7 +4,7 @@
 
 ## 👨‍💻 Created By
 
-- [Kushagara Yadav](https://www.linkedin.com/in/kushagrayadav7/)
+- [Kushagra Yadav](https://www.linkedin.com/in/kushagrayadav7/)
 
 ## 🛠 Maintained By
 
