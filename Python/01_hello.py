@@ -1,8 +1,9 @@
-
 print("""
 ---------------------------------
 |    Hello world Simulator      |
 ---------------------------------
-""") 
-name=input("Enter name: ")
+""")
+
+name = input("Enter name: ")
+
 print(f"Hello,{name}")
