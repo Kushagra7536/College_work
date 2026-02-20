@@ -1,3 +1,9 @@
+print("""
+---------------------------------
+|      Area of △ Simulator      |
+---------------------------------
+""") 
+
 import math
 x=eval(input("Enter side 1: "))
 y=eval(input("Enter side 2: "))

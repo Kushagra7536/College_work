@@ -1,5 +1,8 @@
-# import math as ms
-# n = int(input("Enter Number = "));
+print("""
+---------------------------------
+|         Prime Checker         |
+---------------------------------
+""") 
 
 def prime (n: int) -> bool:
     if(n <= 1): return False
@@ -14,7 +17,6 @@ def prime (n: int) -> bool:
         i = i + 6
     return True
 
-j = 0
-while (j <= 1000):
-    if(prime(j)): print("Number is Prime = ", j)
-    j = j + 1
+n=int(input("Enter a number : "))
+if(prime(n)): print(f"{n} is a prime number")
+else: print(f"{n} is not a prime number")

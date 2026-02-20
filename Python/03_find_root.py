@@ -1,3 +1,10 @@
+print("""
+---------------------------------
+|       Rooting Simulator       |
+---------------------------------
+""") 
+
+
 import math
 x=int(input("Enter a number: "))
 

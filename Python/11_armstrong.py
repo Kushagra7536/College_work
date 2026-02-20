@@ -1,3 +1,9 @@
+print("""
+---------------------------------
+|    Armstrong Number Checker   |
+---------------------------------
+""")
+
 import math
 n=int(input("Enter a freakin number : "))
 digits=0
