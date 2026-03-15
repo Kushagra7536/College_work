@@ -12,4 +12,3 @@ def BubbleSort(arr,n):
 arr=[5,4,3,2,1]
 BubbleSort(arr,5)
 display(arr,5)
-
