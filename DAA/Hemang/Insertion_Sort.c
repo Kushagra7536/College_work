@@ -1,12 +1,10 @@
 #include <stdio.h>
 
 // Insertion Sort Function
-void insertionSort(int arr[], int n)
-{
+void insertionSort(int arr[], int n){
     int i, key, j;
 
-    for (i = 1; i < n; i++)
-    {
+    for (i = 1; i < n; i++){
         key = arr[i]; // element to insert
         j = i - 1;
 
@@ -29,6 +27,7 @@ void printArray(int arr[], int n)
         printf("%d ", arr[i]);
     printf("\n");
 }
+
 
 // Main Function
 int main()

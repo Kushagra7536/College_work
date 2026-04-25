@@ -1,13 +1,11 @@
 #include <stdio.h>
 
 // Partition Function
-int partition(int arr[], int low, int high)
-{
+int partition(int arr[], int low, int high){
     int pivot = arr[high]; // choose last element as pivot
     int i = low - 1;
 
-    for (int j = low; j < high; j++)
-    {
+    for (int j = low; j < high; j++){
         // If current element is smaller than pivot
         if (arr[j] < pivot)
         {
@@ -28,8 +26,7 @@ int partition(int arr[], int low, int high)
 }
 
 // Quick Sort Function
-void quickSort(int arr[], int low, int high)
-{
+void quickSort(int arr[], int low, int high){
     if (low < high)
     {
         // Partition index
@@ -48,6 +45,7 @@ void printArray(int arr[], int n)
         printf("%d ", arr[i]);
     printf("\n");
 }
+
 
 // Main Function
 int main()

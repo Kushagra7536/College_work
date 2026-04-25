@@ -1,21 +1,19 @@
 #include <stdio.h>
 
 // Shell Sort Function
-void shellSort(int arr[], int n)
-{
+void shellSort(int arr[], int n){
     int gap, i, j, temp;
 
     // Start with a large gap, then reduce it
-    for (gap = n / 2; gap > 0; gap /= 2)
-    {
+    for (gap = n / 2; gap > 0; gap /= 2){
 
         // Perform insertion sort for this gap
-        for (i = gap; i < n; i++)
-        {
+        for (i = gap; i < n; i++){
             temp = arr[i];
 
             // Shift earlier gap-sorted elements up
-            for (j = i; j >= gap && arr[j - gap] > temp; j -= gap)
+            for (j = i; j >= gap && 
+                arr[j - gap] > temp; j -= gap)
             {
                 arr[j] = arr[j - gap];
             }
@@ -32,6 +30,7 @@ void printArray(int arr[], int n)
         printf("%d ", arr[i]);
     printf("\n");
 }
+
 
 // Main Function
 int main()

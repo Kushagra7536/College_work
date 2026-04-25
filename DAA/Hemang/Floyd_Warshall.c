@@ -4,8 +4,7 @@
 #define INF 99999
 
 // Function to print the solution matrix
-void printSolution(int dist[V][V])
-{
+void printSolution(int dist[V][V]){
     printf("Shortest distance matrix:\n");
     for (int i = 0; i < V; i++)
     {
@@ -21,8 +20,7 @@ void printSolution(int dist[V][V])
 }
 
 // Floyd-Warshall Algorithm
-void floydWarshall(int graph[V][V])
-{
+void floydWarshall(int graph[V][V]){
     int dist[V][V];
 
     // Initialize distance matrix
